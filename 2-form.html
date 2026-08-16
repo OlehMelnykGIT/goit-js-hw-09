@@ -1,27 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Form</title>
-  <script type="module" crossorigin src="/goit-js-hw-09/assets/modulepreload-polyfill-B5Qt9EMX.js"></script>
-  <link rel="stylesheet" crossorigin href="/goit-js-hw-09/assets/styles-DvPDDfy5.css">
-</head>
-
-<body>
-
-
-  <main>
-    <div class="container">
-      <a class="back-link" href="./index.html">Go back</a>
-
-      <h1 class="main-title">Form</h1>
-
-
-    </div>
-  </main>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <script type="module" crossorigin src="/2-form.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-B5Qt9EMX.js">
+    <link rel="stylesheet" crossorigin href="/assets/styles-CFpMQ_3-.css">
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <a class="back-link" href="./index.html">Go back</a>
+        <form class="feedback-form" autocomplete="off">
+          <label for="user-email">Email</label>
+          <input id="user-email" type="email" name="email" placeholder="Type area" autofocus />
+          <label for="user-message">Message</label>
+          <textarea id="user-message" name="message" rows="8" placeholder="Type area"></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </main>
+  </body>
 </html>
