@@ -2,10 +2,6 @@ body {
   background-color: #ffffff;
 }
 
-body.modal-open {
-  overflow: hidden;
-}
-
 main:has(.gallery),
 main:has(.feedback-form) {
   text-align: left;
@@ -153,91 +149,6 @@ main:has(.feedback-form) .container {
   background-color: #6c8cff;
 }
 
-.gallery-modal {
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 28px 164px;
-  background-color: rgba(46, 47, 66, 0.8);
-}
-
-.gallery-modal[hidden] {
-  display: none;
-}
-
-.gallery-modal__content {
-  max-width: 1112px;
-  max-height: 640px;
-}
-
-.gallery-modal__image {
-  width: min(1112px, calc(100vw - 328px));
-  height: min(640px, calc(100vh - 56px));
-  object-fit: contain;
-}
-
-.gallery-modal__counter {
-  position: absolute;
-  top: 24px;
-  left: 24px;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-}
-
-.gallery-modal__button {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border: none;
-  padding: 0;
-  font-family: inherit;
-  font-size: 40px;
-  line-height: 1;
-  color: #ffffff;
-  background-color: transparent;
-  transition:
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.gallery-modal__button:hover,
-.gallery-modal__button:focus-visible {
-  color: #d9d9d9;
-}
-
-.gallery-modal__button:focus-visible {
-  outline: 2px solid #ffffff;
-  outline-offset: 4px;
-}
-
-.gallery-modal__button--close {
-  top: 24px;
-  right: 24px;
-  font-size: 32px;
-}
-
-.gallery-modal__button--prev {
-  top: 50%;
-  left: 24px;
-  transform: translateY(-50%);
-}
-
-.gallery-modal__button--next {
-  top: 50%;
-  right: 24px;
-  transform: translateY(-50%);
-}
-
 @media only screen and (min-width: 768px) {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
@@ -247,24 +158,5 @@ main:has(.feedback-form) .container {
 @media only screen and (min-width: 1200px) {
   .gallery {
     grid-template-columns: repeat(3, 360px);
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .gallery-modal {
-    padding: 72px 16px;
-  }
-
-  .gallery-modal__image {
-    width: calc(100vw - 32px);
-    height: calc(100vh - 144px);
-  }
-
-  .gallery-modal__button--prev {
-    left: 16px;
-  }
-
-  .gallery-modal__button--next {
-    right: 16px;
   }
 }
